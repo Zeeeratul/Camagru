@@ -1,0 +1,498 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body
+{
+    text-align: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;	
+ 	font-family: 'PT Sans', sans-serif;
+    background-color: #949494;
+    color: white;
+}
+
+h1, h3
+{
+	text-align: center;
+}
+
+/* header */
+
+.error
+{
+	font-size: 18px;
+	color: #99c951;
+}
+
+header
+{
+	font-size: 18px;
+	padding: 20px;
+	display: flex;
+	background-color: #99c951;
+	justify-content: space-around;
+	align-items: center;
+}
+
+header a
+{
+	padding: 13px 10px;	
+	color: black;
+}
+
+header form input
+{
+	height: 46px;
+}
+
+header form input[type=submit] 
+{
+	border: 2px solid grey;
+	padding: 1px 25px;
+	height: 52px;
+}
+
+.create
+{
+	color: white;
+	border: 3px solid white;
+	padding: 10px 10px;	
+}
+
+.create:hover
+{
+	background-color: white;
+	transition: ease 0.5s;
+	color: black;
+}
+
+@media screen and (max-width: 920px) {
+	
+	header
+	{
+		padding: 5px;
+		flex-direction: column;
+	}
+	.link
+	{
+		margin: 15px auto;
+	}
+}
+
+/* main */
+
+#main
+{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #333;
+	flex-grow: 1;
+}
+
+/* footer */
+
+footer
+{
+	bottom: 0;
+	padding: 10px 0;
+	width: 100%;
+	background-color: #555;
+	text-align: center;
+	align-self: flex-end;
+}
+
+a
+{
+	color: white;
+	text-decoration: none;
+}
+
+
+
+/* galery index.php */
+
+.galery
+{
+	margin: auto;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.photo
+{
+	margin: auto;
+	width: 40%;
+}
+
+@media screen and (max-width: 920px) {
+	.photo
+	{
+		width: 100%;
+	}
+}
+
+.photo img
+{
+	background-color: #ccc;
+	border: 2px white solid;
+	width: 66%;
+	min-width: 300px;
+}
+
+.pagination
+{
+	margin: 20px auto;
+	width: 100%;
+	justify-content: center;
+	align-self: flex-end;
+}
+
+.pagination a
+{
+	height: 20%;
+	font-size: 30px;
+}
+
+/*  create_account.php  && forgot_password.php */
+
+.create_account, .forgot_password
+{
+	justify-content: center;
+	width: 75%;
+	margin: auto;
+	max-width: 1500px;
+}
+
+.create_account input[type=text], .create_account input[type=password], .create_account input[type=email], .forgot_password input[type=email], .param input[type=text], .param input[type=password], .param input[type=email], .param input[type=email]
+{
+	width: 100%;
+	padding: 22px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.create_account input[type=submit], .forgot_password input[type=submit], .param input[type=submit]
+{
+	width: 100%;
+	background-color: #99c951;
+	color: white;
+	padding: 22px 20px;
+	margin: 12px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.create_account input[type=submit]:hover, .forgot_password input[type=submit]:hover, .param input[type=submit]:hover
+{
+	background-color: #4CAF50;
+	transition: ease 0.5s;
+}
+
+/* parameters.php */
+
+.param
+{
+	margin: auto;
+	display: flex;	
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	max-width: 1500px;
+	width: 100%;	
+}
+
+.username, .password, .email, .delete, .toggle_email
+{
+	width: 75%;
+	min-width: 300px;
+	margin: auto;
+}
+
+/* The slider */
+
+.switch {
+	margin-bottom: 15px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+}
+
+input:checked + .slider {
+	background-color: #2196F3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+/* image.php */
+
+.photo_section
+{
+	margin-top: 25px;
+	width: 100%;
+}
+
+#main_photo
+{
+	max-width: 50%;
+	border: 2px white solid;
+}
+
+.photo_section input[type=submit]
+{
+	width: 50%;
+	background-color: #99c951;
+	color: white;
+	padding: 22px 20px;
+	margin: 12px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.photo_section input[type=submit]:hover
+{
+	background-color: #4CAF50;
+	transition: ease 0.5s;
+}
+
+#total_like
+{
+	font-size: 18px;
+}
+
+.leave_comment
+{
+	width: 75%;
+	margin-bottom: 50px;	
+	max-width: 1500px;
+}
+
+.leave_comment input[type=submit]
+{
+	width: 100%;
+	background-color: #99c951;
+	color: white;
+	padding: 22px 20px;
+	margin: 12px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.leave_comment input[type=submit]:hover
+{
+	background-color: #4CAF50;
+	transition: ease 0.5s;
+}
+
+.leave_comment input[type=text]
+{
+	width: 100%;
+	padding: 45px 20px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.comment_section
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 75%;
+	margin-bottom: 50px;
+	max-width: 1500px;	
+}
+
+.comment
+{
+	margin: 10px auto;
+	border: 2px #ccc solid;
+	width: 100%;
+	background-color: #99c951;
+}
+
+.comment input[type=submit]
+{
+	width: 100%;
+}
+
+.info
+{
+	margin: 3px auto;
+	font-style: italic;
+	text-align: left;
+
+}
+
+.content_comment
+{
+	text-align: center;
+	font-size: 20px;
+}
+
+
+
+
+/* capture.php */
+
+.capture
+{
+	width: 100%;
+	display: flex;
+	align-content: space-between;
+	flex-wrap: wrap;
+}
+
+.main_capture
+{
+	width: 60%;
+}
+
+.main_capture video
+{
+	width: 70%;
+	height: auto;
+}
+
+.main_capture img
+{
+	max-width: 50px;
+
+}
+
+#startbutton
+{
+	display: none;
+	width: 70%;
+	height: 35px;
+	background-color: #99c951;
+	border: 2px solid black;
+}
+
+#save_image
+{
+	width: 70%;
+	height: 35px;
+	background-color: #99c951;
+	border: 2px solid black;	
+	margin-left: 5px;
+}
+
+canvas
+{
+	width: 70%;
+}
+
+.side_capture
+{
+	min-width: 300px;
+	width: 30%;
+}
+
+.side_capture img
+{
+	margin: 5px;
+	border: 1px white solid;
+	border-radius: 5px;
+	max-width: 150px;
+}
+
+.side_capture img:hover
+{
+	border: 1px #99c951 solid;
+	transition: 0.5 ease;
+}
+
+@media screen and (max-width: 800px) {
+	.main_capture
+	{
+		width: 100%;
+		align-self: center;
+	}
+
+	.main_capture video
+	{
+		width: 70%;
+		height: auto;
+	}
+
+	#startbutton
+	{
+		width: 70%;
+	}
+
+	#save_image
+	{
+		width: 70%;
+	}
+
+	.side_capture
+	{
+		width: 100%;
+		align-self: center;
+	}
+}
